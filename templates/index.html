@@ -1,0 +1,10 @@
+<h1> XUSH KELIBSIZ!</h1>
+
+{% if request.user.is_authenticated %}
+    <p>{{ request.user.username }}</p>
+    <a href="{% url 'logout' %}">LOGOUT</a>
+{% else %}
+    <a href="{% url 'login' %}">LOGIN</a>
+    <a href="{% url 'signup' %}">SIGNUP</a>
+{% endif %}
+
